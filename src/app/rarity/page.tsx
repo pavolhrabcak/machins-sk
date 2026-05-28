@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import SiteLayout from "@/components/SiteLayout";
 import LightboxImage from "@/components/LightboxImage";
+import { GalleryProvider, GalleryTrigger } from "@/components/LightboxGalleryContext";
 import ModalLink from "@/components/ModalLink";
 
 export const metadata: Metadata = {
@@ -100,38 +101,30 @@ export default function RarityPage() {
         výsledkom bola odsúhlasená paleta 12-tich nových farieb.
       </p>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 my-4">
-        {[
-          { src: "Cambridge2_lppxbe", alt: "Cambridge Trials 1" },
-          { src: "Cambridge1_qyu6sw", alt: "Cambridge Trials 2" },
-          { src: "Cambridge6_f0xenv", alt: "Cambridge Trials 3" },
-          { src: "Cambridge7_mmaqeb", alt: "Cambridge Trials 4" },
-        ].map((img) => (
-          <LightboxImage
-            key={img.src}
-            src={`https://res.cloudinary.com/filatelia-machins/image/upload/v1632913822/img/${img.src}.jpg`}
-            alt={img.alt}
-            caption="Cambridge Trials"
-            className="max-w-full h-auto rounded"
-          />
-        ))}
-      </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 my-4">
-        {[
-          { src: "Cambridge4_fe7o3s", alt: "Cambridge Trials 5" },
-          { src: "Cambridge5_rbaduy", alt: "Cambridge Trials 6" },
-          { src: "Cambridge3_kpfj3v", alt: "Cambridge Trials 7" },
-        ].map((img) => (
-          <LightboxImage
-            key={img.src}
-            src={`https://res.cloudinary.com/filatelia-machins/image/upload/v1632913822/img/${img.src}.jpg`}
-            alt={img.alt}
-            caption="Cambridge Trials"
-            className="max-w-full h-auto rounded"
-          />
-        ))}
-      </div>
-      <p className="img-caption">Ukážka Cambridge Colour Trials</p>
+      <GalleryProvider slides={[
+        { src: "https://res.cloudinary.com/filatelia-machins/image/upload/v1632913822/img/Cambridge2_lppxbe.jpg", alt: "Cambridge Trials 1", caption: "Cambridge Colour Trials" },
+        { src: "https://res.cloudinary.com/filatelia-machins/image/upload/v1632913822/img/Cambridge1_qyu6sw.jpg", alt: "Cambridge Trials 2", caption: "Cambridge Colour Trials" },
+        { src: "https://res.cloudinary.com/filatelia-machins/image/upload/v1632913822/img/Cambridge6_f0xenv.jpg", alt: "Cambridge Trials 3", caption: "Cambridge Colour Trials" },
+        { src: "https://res.cloudinary.com/filatelia-machins/image/upload/v1632913822/img/Cambridge7_mmaqeb.jpg", alt: "Cambridge Trials 4", caption: "Cambridge Colour Trials" },
+        { src: "https://res.cloudinary.com/filatelia-machins/image/upload/v1632913822/img/Cambridge4_fe7o3s.jpg", alt: "Cambridge Trials 5", caption: "Cambridge Colour Trials" },
+        { src: "https://res.cloudinary.com/filatelia-machins/image/upload/v1632913822/img/Cambridge5_rbaduy.jpg", alt: "Cambridge Trials 6", caption: "Cambridge Colour Trials" },
+        { src: "https://res.cloudinary.com/filatelia-machins/image/upload/v1632913822/img/Cambridge3_kpfj3v.jpg", alt: "Cambridge Trials 7", caption: "Cambridge Colour Trials" },
+      ]}>
+        <div className="max-w-[80%] mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 my-4">
+            <GalleryTrigger index={0} className="w-full h-auto rounded" />
+            <GalleryTrigger index={1} className="w-full h-auto rounded" />
+            <GalleryTrigger index={2} className="w-full h-auto rounded" />
+            <GalleryTrigger index={3} className="w-full h-auto rounded" />
+          </div>
+          <div className="grid grid-cols-3 gap-3 my-4 w-3/4 mx-auto">
+            <GalleryTrigger index={4} className="w-full h-auto rounded" />
+            <GalleryTrigger index={5} className="w-full h-auto rounded" />
+            <GalleryTrigger index={6} className="w-full h-auto rounded" />
+          </div>
+        </div>
+        <p className="img-caption">Ukážka Cambridge Colour Trials</p>
+      </GalleryProvider>
 
       <h3>Courvoisier</h3>
       <p>

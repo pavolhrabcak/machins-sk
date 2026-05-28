@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import SiteLayout from "@/components/SiteLayout";
 import LightboxImage from "@/components/LightboxImage";
+import LightboxGallery from "@/components/LightboxGallery";
 import ModalLink from "@/components/ModalLink";
 
 export const metadata: Metadata = {
@@ -30,17 +31,12 @@ export default function PohladniceAPosteryPage() {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
-        <LightboxImage
-          src="https://res.cloudinary.com/filatelia-machins/image/upload/v1631482212/img/phq-card-with-stamp_epxypg.jpg"
-          alt="Pohľadnica D6 (1993)"
-          caption="Pohľadnica D6 (1993)"
+        <LightboxGallery
           className="max-w-full h-auto rounded"
-        />
-        <LightboxImage
-          src="https://res.cloudinary.com/filatelia-machins/image/upload/v1631482208/img/phq-card-with-stamp-2_eczgz3.jpg"
-          alt="Pohľadnica D7 (1995)"
-          caption="Pohľadnica D7 (1995)"
-          className="max-w-full h-auto rounded"
+          slides={[
+            { src: "https://res.cloudinary.com/filatelia-machins/image/upload/v1631482212/img/phq-card-with-stamp_epxypg.jpg", alt: "Pohľadnica D6 (1993)", caption: "Pohľadnica D6 (1993)" },
+            { src: "https://res.cloudinary.com/filatelia-machins/image/upload/v1631482208/img/phq-card-with-stamp-2_eczgz3.jpg", alt: "Pohľadnica D7 (1995)", caption: "Pohľadnica D7 (1995)" },
+          ]}
         />
       </div>
       <p className="img-caption">
@@ -105,23 +101,13 @@ export default function PohladniceAPosteryPage() {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
-        <LightboxImage
-          src="https://res.cloudinary.com/filatelia-machins/image/upload/v1631482208/img/poster-2_vumhet.jpg"
-          alt="Poster 1"
-          caption="Poster 1"
+        <LightboxGallery
           className="max-w-full h-auto rounded"
-        />
-        <LightboxImage
-          src="https://res.cloudinary.com/filatelia-machins/image/upload/v1631482208/img/poster-4_ocq3xw.jpg"
-          alt="Poster 2"
-          caption="Poster 2"
-          className="max-w-full h-auto rounded"
-        />
-        <LightboxImage
-          src="https://res.cloudinary.com/filatelia-machins/image/upload/v1631482208/img/poster-5_utuqyr.jpg"
-          alt="Poster 3"
-          caption="Poster 3"
-          className="max-w-full h-auto rounded"
+          slides={[
+            { src: "https://res.cloudinary.com/filatelia-machins/image/upload/v1631482208/img/poster-2_vumhet.jpg", alt: "Poster 1", caption: "Reklamný poster – nové vydania definitívnych známok" },
+            { src: "https://res.cloudinary.com/filatelia-machins/image/upload/v1631482208/img/poster-4_ocq3xw.jpg", alt: "Poster 2", caption: "Reklamný poster – nové vydania definitívnych známok" },
+            { src: "https://res.cloudinary.com/filatelia-machins/image/upload/v1631482208/img/poster-5_utuqyr.jpg", alt: "Poster 3", caption: "Reklamný poster – nové vydania definitívnych známok" },
+          ]}
         />
       </div>
       <p className="img-caption">

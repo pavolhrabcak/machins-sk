@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import SiteLayout from "@/components/SiteLayout";
 import LightboxImage from "@/components/LightboxImage";
+import LightboxGallery from "@/components/LightboxGallery";
 import ModalLink from "@/components/ModalLink";
 
 export const metadata: Metadata = {
@@ -27,16 +28,12 @@ export default function HongkongPage() {
         formáte 14.
       </p>
 
-      <LightboxImage
-        src="https://res.cloudinary.com/filatelia-machins/image/upload/v1631482207/img/hk-velke_x99je8.jpg"
-        alt="Hong Kong, veľký formát"
+      <LightboxGallery
         className="max-w-full h-auto rounded my-2"
-      />
-      <LightboxImage
-        src="https://res.cloudinary.com/filatelia-machins/image/upload/v1631482207/img/hk-velke1_fl3kfj.jpg"
-        alt="Hong Kong, veľký formát"
-        caption="Kompletná sada vyšších nominálov (10$ a viac) vo väčšom formáte"
-        className="max-w-full h-auto rounded my-2"
+        slides={[
+          { src: "https://res.cloudinary.com/filatelia-machins/image/upload/v1631482207/img/hk-velke_x99je8.jpg", alt: "Hong Kong, veľký formát" },
+          { src: "https://res.cloudinary.com/filatelia-machins/image/upload/v1631482207/img/hk-velke1_fl3kfj.jpg", alt: "Hong Kong, veľký formát", caption: "Kompletná sada vyšších nominálov (10$ a viac) vo väčšom formáte" },
+        ]}
       />
 
       <p>
@@ -50,30 +47,14 @@ export default function HongkongPage() {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-4">
-        <div>
-          <LightboxImage
-            src="https://res.cloudinary.com/filatelia-machins/image/upload/v1631482207/img/hk-booklet-01_m5phyl.jpg"
-            alt="Hong Kong Classics #3"
-            caption="6-blok z bookletu Classics No.3"
-            className="max-w-full h-auto rounded my-2"
-          />
-        </div>
-        <div>
-          <LightboxImage
-            src="https://res.cloudinary.com/filatelia-machins/image/upload/v1631482207/img/hk-booklet-03_tsfcf5.jpg"
-            alt="Hong Kong Classics #4"
-            caption="6-blok z bookletu Classics No.4"
-            className="max-w-full h-auto rounded my-2"
-          />
-        </div>
-        <div>
-          <LightboxImage
-            src="https://res.cloudinary.com/filatelia-machins/image/upload/v1631482207/img/hk-booklet-02_hrddbz.jpg"
-            alt="Hong Kong Classics #5"
-            caption="6-blok z bookletu Classics No.5"
-            className="max-w-full h-auto rounded my-2"
-          />
-        </div>
+        <LightboxGallery
+          className="max-w-full h-auto rounded my-2"
+          slides={[
+            { src: "https://res.cloudinary.com/filatelia-machins/image/upload/v1631482207/img/hk-booklet-01_m5phyl.jpg", alt: "Hong Kong Classics #3", caption: "6-blok z bookletu Classics No.3" },
+            { src: "https://res.cloudinary.com/filatelia-machins/image/upload/v1631482207/img/hk-booklet-03_tsfcf5.jpg", alt: "Hong Kong Classics #4", caption: "6-blok z bookletu Classics No.4" },
+            { src: "https://res.cloudinary.com/filatelia-machins/image/upload/v1631482207/img/hk-booklet-02_hrddbz.jpg", alt: "Hong Kong Classics #5", caption: "6-blok z bookletu Classics No.5" },
+          ]}
+        />
       </div>
 
       <h2>Zberateľské zaujímavosti</h2>
