@@ -10,7 +10,7 @@ const navItems = [
   { href: "/parametre", label: "Parametre" },
   { href: "/nvi", label: "NVI (bez nominálu)" },
   { href: "/regionalne", label: "Regionálne vydania" },
-  { href: "/rilezitostne", label: "Príležitostné vydania" },
+  { href: "/prilezitostne", label: "Príležitostné vydania" },
   { href: "/hongkong", label: "Hong Kong" },
   { href: "/pasiky", label: "Pásiky" },
   { href: "/medziharcie", label: "Medzihárčie" },

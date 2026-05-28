@@ -51,6 +51,13 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.content h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
 .content p {
   margin-bottom: 0.875rem;
   color: var(--text-primary);
@@ -90,9 +97,12 @@ body {
 }
 
 .content img {
+  display: block;
   max-width: 100%;
   height: auto;
   border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .content table {
@@ -127,13 +137,13 @@ body {
   font-style: italic;
 }
 
-/* Image caption */
-.img-caption {
+/* Image caption — higher specificity than .content p to win on margin and color */
+.content p.img-caption {
   font-size: 0.8rem;
   color: var(--text-muted);
   text-align: center;
   margin-top: 0.25rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   font-style: italic;
 }
 

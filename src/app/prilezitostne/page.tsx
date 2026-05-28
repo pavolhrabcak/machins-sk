@@ -43,12 +43,15 @@ export default function RilezitostnePage() {
         čiernej farbe.
       </p>
 
-      <LightboxImage
-        src="https://res.cloudinary.com/filatelia-machins/image/upload/v1632250956/img/anniversary_1990_uskllo.jpg"
-        alt="Penny Black Anniversary"
-        caption="Image credit: Robin Harris, Adminware. Penny Black Anniversary"
-        className="max-w-full h-auto rounded my-2"
-      />
+      <div className="max-w-[80%] mx-auto">
+        <LightboxImage
+          src="https://res.cloudinary.com/filatelia-machins/image/upload/v1632250956/img/anniversary_1990_uskllo.jpg"
+          alt="Penny Black Anniversary"
+          caption="Penny Black Anniversary"
+          className="max-w-full h-auto rounded my-2"
+        />
+        <p className="img-caption">Image credit: Robin Harris, Adminware. Penny Black Anniversary</p>
+      </div>
 
       <h2>Millennium (2000)</h2>
       <div className="callout callout-warning">
@@ -67,48 +70,60 @@ export default function RilezitostnePage() {
         Pri príležitosti filatelistickej výstavy v Londýne bol vydaný tzv. <em>Exhibition souvenir</em>, hárček, na ktorom je 8 známok Machins doplnených farebnou paletou Jeffreyho Matthewsa.
       </p>
 
-      <LightboxImage
-        src="https://res.cloudinary.com/filatelia-machins/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1632253471/img/stamp-show-2000_bwezof.jpg"
-        alt="Stamp show"
-        caption='Hárček "Matthews Palette" zo Stamp Show (2000)'
-        className="max-w-full h-auto rounded my-2"
-      />
+      <div className="max-w-[80%] mx-auto">
+        <LightboxImage
+          src="https://res.cloudinary.com/filatelia-machins/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1632253471/img/stamp-show-2000_bwezof.jpg"
+          alt="Stamp show"
+          caption='Hárček "Matthews Palette" zo Stamp Show (2000)'
+          className="max-w-full h-auto rounded my-2"
+        />
+        <p className="img-caption">Hárček &bdquo;Matthews Palette&ldquo; zo Stamp Show (2000)</p>
+      </div>
 
       <h2>The Machin Definitives 40th Anniversary (2007)</h2>
       <p>
         Pri 40. výročí vydávania definitívnych známok s dizajnom Arnolda Machina bol vydaný Hárček s dvoma známkami pre prvú triedu a dvoma Machins v nominálnej hodnote jednej libry. Dizajn zobrazuje portrét Arnolda Machina a prvú známku celej série v hodnote 4d.
       </p>
 
-      <LightboxImage
-        src="https://res.cloudinary.com/filatelia-machins/image/upload/v1632298205/img/arnold-machin_q48ey7.jpg"
-        alt="40th Anniversary"
-        caption="Hárček The Machin Definitives 40th Anniversary (2007)"
-        className="max-w-full h-auto rounded my-2"
-      />
+      <div className="max-w-[80%] mx-auto">
+        <LightboxImage
+          src="https://res.cloudinary.com/filatelia-machins/image/upload/v1632298205/img/arnold-machin_q48ey7.jpg"
+          alt="40th Anniversary"
+          caption="Hárček The Machin Definitives 40th Anniversary (2007)"
+          className="max-w-full h-auto rounded my-2"
+        />
+        <p className="img-caption">Hárček The Machin Definitives 40th Anniversary (2007)</p>
+      </div>
 
       <h2>Festival of Stamps, London (2010)</h2>
       <p>
         Každých 10 rokov sa koná v Londýne medzinárodná filatelistická výstava a pri tejto priležitosti bol v roku 2010 vydaný ďalší hárček, tentokrát s 11 známkami Machins, doplnený kupónom s logom výstavy.
       </p>
 
-      <LightboxImage
-        src="https://res.cloudinary.com/filatelia-machins/image/upload/v1632318331/img/ehxhib_souvenir_f0rekf.jpg"
-        alt="Festival of Stamps"
-        caption="Hárček z Festival of Stamps, London (2010)"
-        className="max-w-full h-auto rounded my-2"
-      />
+      <div style={{ width: "64%", margin: "0 auto" }}>
+        <LightboxImage
+          src="https://res.cloudinary.com/filatelia-machins/image/upload/v1632318331/img/ehxhib_souvenir_f0rekf.jpg"
+          alt="Festival of Stamps"
+          caption="Hárček z Festival of Stamps, London (2010)"
+          className="max-w-full h-auto rounded my-2"
+        />
+        <p className="img-caption">Hárček z Festival of Stamps, London (2010)</p>
+      </div>
 
       <h2>Arnold Machin Birth Centenary (2011)</h2>
       <p>
         Pri príležitosti 100-ho výročia narodenia Arnolda Machina bol vydaný hárček s desiatimi známkami prvej triedy vo farbe gold. Známky v hárčeku majú jedinečné textové kódy, pre rok vydania AM11 (namiesto klasického MA11) a pre zdroj MMIL. Tlač Walsall.
       </p>
 
-      <LightboxImage
-        src="https://res.cloudinary.com/filatelia-machins/image/upload/v1633633290/img/Machin-miniharcek_vohbo1.jpg"
-        alt="Arnold Machin Birth Centenary"
-        caption="Hárček: Sté výročie narodenia Arnolda Machina (2011)"
-        className="max-w-full h-auto rounded my-2"
-      />
+      <div className="max-w-[80%] mx-auto">
+        <LightboxImage
+          src="https://res.cloudinary.com/filatelia-machins/image/upload/v1633633290/img/Machin-miniharcek_vohbo1.jpg"
+          alt="Arnold Machin Birth Centenary"
+          caption="Hárček: Sté výročie narodenia Arnolda Machina (2011)"
+          className="max-w-full h-auto rounded my-2"
+        />
+        <p className="img-caption">Hárček: Sté výročie narodenia Arnolda Machina (2011)</p>
+      </div>
 
       <h2>Diamond Jubilee (2012)</h2>
       <p>
@@ -120,12 +135,15 @@ export default function RilezitostnePage() {
         V septembri 2015, k 90-tym narodeninám kráľovnej a súčasne z dôvodu, že sa Alžbeta II. stala najdlhšie vládnucim britským monarchom, bol vydaný prezentačný balíček obsahujúci hárček s 5 známkami, na ktorých dominuje ikonický Machinov dizajn. Súčasťou je aj definitívna známka pre prvú triedu vo farbe <em>Amethyst purple</em>, ktorá na 12 mesiacov nahradila dovtedy používanú, červenú.
       </p>
 
-      <LightboxImage
-        src="https://res.cloudinary.com/filatelia-machins/image/upload/v1631482213/img/90th_mini_dscwmh.jpg"
-        alt="Long to Reign Over Us"
-        caption="Hárček Long to Reign Over Us (2015)"
-        className="max-w-full h-auto rounded my-2"
-      />
+      <div className="max-w-[80%] mx-auto">
+        <LightboxImage
+          src="https://res.cloudinary.com/filatelia-machins/image/upload/v1631482213/img/90th_mini_dscwmh.jpg"
+          alt="Long to Reign Over Us"
+          caption="Hárček Long to Reign Over Us (2015)"
+          className="max-w-full h-auto rounded my-2"
+        />
+        <p className="img-caption">Hárček Long to Reign Over Us (2015)</p>
+      </div>
 
       <h2>Golden Anniversary (2017)</h2>
       <p>
@@ -145,12 +163,15 @@ export default function RilezitostnePage() {
         Pri 65. výročí nástupu kráľovnej Alžbety II. na trón bola vydaná 5 librová známka vo veľkom formáte vo farbe <em>Sapphire Blue</em>. Oficiálne je zaradená medzi definitívne známky, hoci jej nominálna hodnota nezodpovedala vtedajším platným tarifám pre poštové služby.
       </p>
 
-      <LightboxImage
-        src="https://res.cloudinary.com/filatelia-machins/image/upload/v1632299430/img/65th_nw6br1.png"
-        alt="65th Anniversary"
-        caption="65th Anniversary of the Accession (2017)"
-        className="max-w-full h-auto rounded my-2"
-      />
+      <div style={{ width: "64%", margin: "0 auto" }}>
+        <LightboxImage
+          src="https://res.cloudinary.com/filatelia-machins/image/upload/v1632299430/img/65th_nw6br1.png"
+          alt="65th Anniversary"
+          caption="65th Anniversary of the Accession (2017)"
+          className="max-w-full h-auto rounded my-2"
+        />
+        <p className="img-caption">65th Anniversary of the Accession (2017)</p>
+      </div>
 
       <p>
         Pri vyššie spomínaných výročiach a výstavách boli vydávané aj ďalšie filatelistické materiály ako napríklad obálky prvého dňa vydania, príležitostné pečiatky, prezentačné balíčky, <ModalLink href="https://res.cloudinary.com/filatelia-machins/image/upload/v1632309069/img/40-th-Smiler_hbydnz.jpg">smilers</ModalLink> (známkové hárky veľkosti A4 doplnené kupónmi s generickým dizajnom) a iné.

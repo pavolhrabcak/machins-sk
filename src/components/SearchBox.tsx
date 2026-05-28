@@ -3,13 +3,26 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { createPortal } from "react-dom";
 import { useRouter } from "next/navigation";
-import { searchData, type SearchEntry } from "@/lib/searchData";
 
-function search(query: string): SearchEntry[] {
+interface SearchEntry {
+  title: string;
+  url: string;
+  description: string;
+  body: string;
+}
+
+let cachedIndex: SearchEntry[] | null = null;
+
+async function loadIndex(): Promise<SearchEntry[]> {
+  if (cachedIndex) return cachedIndex;
+  const res = await fetch("/search-data.json");
+  cachedIndex = await res.json();
+  return cachedIndex!;
+}
+
+function searchEntries(entries: SearchEntry[], query: string): SearchEntry[] {
   const q = query.toLowerCase().trim();
-  if (q.length < 2) return [];
-
-  return searchData
+  return entries
     .map((entry) => {
       const inTitle = entry.title.toLowerCase().includes(q) ? 10 : 0;
       const inDesc = entry.description.toLowerCase().includes(q) ? 5 : 0;
@@ -37,18 +50,30 @@ export default function SearchBox() {
   useEffect(() => { setMounted(true); }, []);
 
   useEffect(() => {
-    const found = search(query);
-    setResults(found);
-    if (found.length > 0) {
-      if (containerRef.current) {
-        const rect = containerRef.current.getBoundingClientRect();
-        setDropdownPos({ top: rect.bottom, left: rect.left, width: rect.width });
-      }
-      setOpen(true);
-    } else {
+    const q = query.toLowerCase().trim();
+    if (q.length < 2) {
+      setResults([]);
       setOpen(false);
+      setActiveIndex(-1);
+      return;
     }
-    setActiveIndex(-1);
+    let cancelled = false;
+    loadIndex().then((index) => {
+      if (cancelled) return;
+      const found = searchEntries(index, q);
+      setResults(found);
+      if (found.length > 0) {
+        if (containerRef.current) {
+          const rect = containerRef.current.getBoundingClientRect();
+          setDropdownPos({ top: rect.bottom, left: rect.left, width: rect.width });
+        }
+        setOpen(true);
+      } else {
+        setOpen(false);
+      }
+      setActiveIndex(-1);
+    });
+    return () => { cancelled = true; };
   }, [query]);
 
   useEffect(() => {

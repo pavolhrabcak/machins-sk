@@ -39,41 +39,37 @@ export default function RegionalnePage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
-        <div>
-          <p className="text-center">SEV. ÍRSKO</p>
+      <div className="grid grid-cols-4 gap-4 my-4 max-w-xl mx-auto">
+        <div className="text-center">
+          <p className="text-sm mb-1">SEV. ÍRSKO</p>
           <img
-            className="max-w-full h-auto rounded my-2"
             src="https://res.cloudinary.com/filatelia-machins/image/upload/v1631482207/img/ireland_jwuf6o.jpg"
             alt="Northern Ireland"
-            width={120}
+            width={100}
           />
         </div>
-        <div>
-          <p className="text-center">ŠKÓTSKO</p>
+        <div className="text-center">
+          <p className="text-sm mb-1">ŠKÓTSKO</p>
           <img
-            className="max-w-full h-auto rounded my-2"
             src="https://res.cloudinary.com/filatelia-machins/image/upload/v1631482209/img/scotland_brlflb.jpg"
             alt="Scotland"
-            width={120}
+            width={100}
           />
         </div>
-        <div>
-          <p className="text-center">WALES</p>
+        <div className="text-center">
+          <p className="text-sm mb-1">WALES</p>
           <img
-            className="max-w-full h-auto rounded my-2"
             src="https://res.cloudinary.com/filatelia-machins/image/upload/v1631482209/img/wales_rykwom.jpg"
             alt="Wales"
-            width={120}
+            width={100}
           />
         </div>
-        <div>
-          <p className="text-center">MAN</p>
+        <div className="text-center">
+          <p className="text-sm mb-1">MAN</p>
           <img
-            className="max-w-full h-auto rounded my-2"
             src="https://res.cloudinary.com/filatelia-machins/image/upload/v1631482207/img/isleofman_w7akli.jpg"
             alt="Isle of Man"
-            width={120}
+            width={100}
           />
         </div>
       </div>
@@ -89,12 +85,14 @@ export default function RegionalnePage() {
         </p>
       </div>
 
-      <img
-        className="max-w-full h-auto rounded my-2"
-        src="https://res.cloudinary.com/filatelia-machins/image/upload/v1631482208/img/reionals-shades_p5wjkd.jpg"
-        alt="Regionálne farby a odtiene"
-      />
-      <p className="img-caption">Image credit: Myall Douglas, The Complete Deegam Machin Handbook</p>
+      <div className="max-w-[506px] mx-auto my-2">
+        <img
+          className="w-full rounded"
+          src="https://res.cloudinary.com/filatelia-machins/image/upload/v1631482208/img/reionals-shades_p5wjkd.jpg"
+          alt="Regionálne farby a odtiene"
+        />
+        <p className="img-caption">Image credit: Myall Douglas, The Complete Deegam Machin Handbook</p>
+      </div>
 
       <h2>Typy heraldických symbolov</h2>
       <p>
@@ -105,21 +103,23 @@ export default function RegionalnePage() {
         Ako vidieť v názornej ukážke pre Škótsko - oko, jazyk, hriva, zadné nohy a chvost leva vyzerajú inak:
       </p>
 
-      <LightboxImage
-        src="https://res.cloudinary.com/filatelia-machins/image/upload/v1631482209/img/symboly_owfrvt.jpg"
-        alt="Regionálne symboly - rozdiely"
-        caption="Regionálne symboly - rozdiely"
-        className="max-w-full h-auto rounded my-2"
-      />
-      <p className="img-caption">Image credit: Connoisseur Catalogue, Connoisseur Publications</p>
+      <div className="w-4/5 mx-auto my-2">
+        <LightboxImage
+          src="https://res.cloudinary.com/filatelia-machins/image/upload/v1631482209/img/symboly_owfrvt.jpg"
+          alt="Regionálne symboly - rozdiely"
+          caption="Regionálne symboly - rozdiely"
+          className="w-full rounded"
+        />
+        <p className="img-caption">Image credit: Connoisseur Catalogue, Connoisseur Publications</p>
+      </div>
 
       <p>
         Pre každý región s rozlíšenými typmi heraldických symbolov existuje niekoľko nominálov, ktoré sa vyskytujú
         s oboma dostupnými typmi. Farby uvádzam v angl. forme pre lepšie vyhľadávanie v katalógoch a u predajcov:
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
+      <div className="grid grid-cols-3 gap-4 my-4 items-start">
         <div>
-          <h4>Škótsko</h4>
+          <h4 className="text-center">Škótsko</h4>
           <ul>
             <li>13p <em>(reddish brown)</em></li>
             <li>17p <em>(blue grey)</em></li>
@@ -128,7 +128,7 @@ export default function RegionalnePage() {
           </ul>
         </div>
         <div>
-          <h4>Wales</h4>
+          <h4 className="text-center">Wales</h4>
           <ul>
             <li>13p <em>(reddish brown)</em></li>
             <li>17p <em>(blue grey)</em></li>
@@ -136,7 +136,7 @@ export default function RegionalnePage() {
           </ul>
         </div>
         <div>
-          <h4>Severné Írsko</h4>
+          <h4 className="text-center">Severné Írsko</h4>
           <ul>
             <li>17p <em>(blue grey)</em></li>
             <li>28p <em>(greyish violet)</em></li>
@@ -152,15 +152,17 @@ export default function RegionalnePage() {
         na nasledovnom príklade:
       </p>
 
-      <LightboxImage
-        src="https://res.cloudinary.com/filatelia-machins/image/upload/v1631482208/img/regionals-block_vwwimh.jpg"
-        alt="Regionálne booklet DX18"
-        caption="Regionálne booklet DX18"
-        className="max-w-full h-auto rounded my-2"
-      />
-      <p className="img-caption">
-        Ukážka booklet pane z Prestige Bookletu DX18 z roku 1996 (Škótsko, Wales, Sev. Írsko a národné vydanie).
-      </p>
+      <div className="w-4/5 mx-auto my-2">
+        <LightboxImage
+          src="https://res.cloudinary.com/filatelia-machins/image/upload/v1631482208/img/regionals-block_vwwimh.jpg"
+          alt="Regionálne booklet DX18"
+          caption="Regionálne booklet DX18"
+          className="w-full rounded"
+        />
+        <p className="img-caption">
+          Ukážka booklet pane z Prestige Bookletu DX18 z roku 1996 (Škótsko, Wales, Sev. Írsko a národné vydanie).
+        </p>
+      </div>
 
       <h2>Desiatkový systém a posledné vydania</h2>
       <p>

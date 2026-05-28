@@ -33,6 +33,7 @@ export default function RootLayout({
   return (
     <html
       lang="sk"
+      data-scroll-behavior="smooth"
       className={`${robotoSlab.variable} ${lora.variable}`}
     >
       <head>
