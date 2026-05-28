@@ -164,9 +164,9 @@ body {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  background: var(--brand-blue);
-  color: white;
-  border: none;
+  background: white;
+  color: var(--brand-blue);
+  border: 2px solid var(--brand-blue);
   border-radius: 50%;
   width: 44px;
   height: 44px;
@@ -174,8 +174,8 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  transition: background 0.15s, opacity 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: background 0.15s, color 0.15s, opacity 0.3s;
   z-index: 999;
   opacity: 0;
   pointer-events: none;
@@ -187,7 +187,7 @@ body {
 }
 
 .scroll-top-btn:hover {
-  background: var(--brand-blue-hover);
+  background: #dceeff;
 }
 
 /* Callout boxes */
