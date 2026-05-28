@@ -1,0 +1,18 @@
+{
+  "js/ts.tsserver.maxMemory": 1024,
+  "js/ts.tsserver.automaticTypeAcquisition.enabled": false,
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/.next/**": true
+  },
+  "files.exclude": {
+    "**/.next": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.next": true
+  },
+  "typescript.preferences.includePackageJsonAutoImports": "off"
+}
