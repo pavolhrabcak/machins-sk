@@ -54,8 +54,9 @@ body {
 .content h4 {
   font-size: 1rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--brand-blue);
   margin-bottom: 0.5rem;
+  text-decoration: none;
 }
 
 .content p {
