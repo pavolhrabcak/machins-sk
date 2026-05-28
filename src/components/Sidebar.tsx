@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import SearchBox from "@/components/SearchBox";
 
 const navItems = [
   { href: "/", label: "Úvod do Machins" },
@@ -67,7 +66,6 @@ export default function Sidebar() {
       {/* Desktop sidebar */}
       <nav className="hidden md:flex flex-col w-60 shrink-0 bg-gray-100 border-r border-gray-200 sticky top-14 self-start">
         <div className="pt-4 pb-8">
-          <SearchBox />
           {navItems.map((item) => {
             const isActive =
               item.href === "/"
@@ -93,7 +91,6 @@ export default function Sidebar() {
       {/* Mobile dropdown nav */}
       {mobileOpen && (
         <nav className="md:hidden flex flex-col bg-gray-100 border-b border-gray-200">
-          <SearchBox />
           {navItems.map((item) => {
             const isActive =
               item.href === "/"

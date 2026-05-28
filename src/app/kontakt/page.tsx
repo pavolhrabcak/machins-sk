@@ -17,7 +17,7 @@ export default function KontaktPage() {
         ma kontaktovať:
       </p>
 
-      <div className="max-w-xl mt-6">
+      <div className="mt-6">
         <form
           target="_blank"
           action="https://formsubmit.co/machins.sk@gmail.com"
@@ -56,13 +56,6 @@ export default function KontaktPage() {
         </form>
       </div>
 
-      <div className="max-w-md mx-auto mt-8 mb-8">
-        <img
-          src="https://res.cloudinary.com/filatelia-machins/image/upload/v1632821415/img/kontakt_clwzs0.jpg"
-          alt="Kontakt"
-          className="max-w-full h-auto rounded"
-        />
-      </div>
     </SiteLayout>
   );
 }
