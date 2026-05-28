@@ -20,13 +20,17 @@ async function loadIndex(): Promise<SearchEntry[]> {
   return cachedIndex!;
 }
 
+function normalize(s: string): string {
+  return s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+}
+
 function searchEntries(entries: SearchEntry[], query: string): SearchEntry[] {
-  const q = query.toLowerCase().trim();
+  const q = normalize(query.trim());
   return entries
     .map((entry) => {
-      const inTitle = entry.title.toLowerCase().includes(q) ? 10 : 0;
-      const inDesc = entry.description.toLowerCase().includes(q) ? 5 : 0;
-      const inBody = entry.body.toLowerCase().includes(q) ? 1 : 0;
+      const inTitle = normalize(entry.title).includes(q) ? 10 : 0;
+      const inDesc = normalize(entry.description).includes(q) ? 5 : 0;
+      const inBody = normalize(entry.body).includes(q) ? 1 : 0;
       return { entry, score: inTitle + inDesc + inBody };
     })
     .filter(({ score }) => score > 0)

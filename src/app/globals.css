@@ -225,6 +225,21 @@ body {
   color: #92400e;
 }
 
+/* Heading anchor links */
+.content h2 .heading-anchor {
+  opacity: 0;
+  margin-left: 0.4rem;
+  font-size: 0.8em;
+  font-weight: 400;
+  color: #aaa;
+  text-decoration: none !important;
+  transition: opacity 0.15s;
+}
+
+.content h2:hover .heading-anchor {
+  opacity: 1;
+}
+
 /* Search highlight */
 mark.search-hl {
   background: #ffe066;

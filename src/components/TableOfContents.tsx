@@ -40,9 +40,18 @@ export default function TableOfContents() {
         el.id = id;
       }
       usedIds.add(el.id);
+
+      if (!el.querySelector(".heading-anchor")) {
+        const anchor = document.createElement("a");
+        anchor.href = `#${el.id}`;
+        anchor.className = "heading-anchor";
+        anchor.setAttribute("aria-hidden", "true");
+        anchor.textContent = "#";
+        el.appendChild(anchor);
+      }
     });
 
-    setHeadings(els.map((el) => ({ id: el.id, text: el.textContent ?? "" })));
+    setHeadings(els.map((el) => ({ id: el.id, text: el.textContent?.replace(/#$/, "").trim() ?? "" })));
 
     const observer = new IntersectionObserver(
       (entries) => {

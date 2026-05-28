@@ -14,7 +14,7 @@ export default function NotFound() {
         </p>
         <Link
           href="/"
-          className="inline-block px-6 py-3 bg-[#003366] text-white rounded hover:bg-[#004488] transition-colors font-medium"
+          className="inline-block px-6 py-3 bg-[#003366] !text-white !no-underline rounded hover:bg-[#004488] transition-colors font-medium"
         >
           Späť na úvodnú stránku
         </Link>

@@ -25,6 +25,18 @@ export const metadata: Metadata = {
     "Slovenský sprievodca svetom britských definitívnych známok Machins. Parametre, typy, raritné kusy, regionálne vydania a ďalšie informácie.",
   authors: [{ name: "Pavol Hrabčák" }],
   robots: { index: true, follow: true },
+  openGraph: {
+    type: "website",
+    locale: "sk_SK",
+    siteName: "Filatelia Machins SK",
+    images: [
+      {
+        url: "https://res.cloudinary.com/filatelia-machins/image/upload/v1631482208/img/predecimal_zkklzs.jpg",
+        width: 800,
+        alt: "Filatelia Machins SK",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
