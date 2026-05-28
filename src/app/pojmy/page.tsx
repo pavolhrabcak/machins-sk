@@ -19,7 +19,7 @@ function Term({
   return (
     <div className="pt-4">
       <h4 className="font-semibold text-[#003366] text-base mb-1">{term}</h4>
-      <div className="text-sm leading-relaxed">{children}</div>
+      <div className="leading-relaxed">{children}</div>
     </div>
   );
 }
