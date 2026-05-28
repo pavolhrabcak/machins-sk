@@ -64,13 +64,14 @@ body {
 }
 
 .content a {
-  color: var(--brand-blue);
-  text-decoration: underline;
+  color: #2471a3;
+  text-decoration: none;
   transition: color 0.15s;
 }
 
 .content a:hover {
-  color: var(--brand-blue-hover);
+  color: #1a5276;
+  text-decoration: underline;
 }
 
 .content ul, .content ol {
