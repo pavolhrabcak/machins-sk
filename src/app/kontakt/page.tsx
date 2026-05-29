@@ -24,6 +24,7 @@ export default function KontaktPage() {
           method="POST"
           className="space-y-4"
         >
+          <input type="text" name="_honey" style={{ display: "none" }} />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input
               type="text"
