@@ -18,7 +18,7 @@ export default function SiteLayout({ children }: Props) {
     <div className="flex flex-col min-h-screen bg-gray-100">
       <ScrollProgress />
       <Banner />
-      <div className="flex flex-col md:flex-row flex-1 max-w-[1200px] mx-auto w-full bg-gray-100 shadow-sm">
+      <div className="flex flex-col md:flex-row flex-1 max-w-[1200px] mx-auto w-full bg-gray-100">
         <Sidebar />
         <main className="flex-1 content px-4 md:px-6 py-6 md:py-8 min-w-0 bg-white">
           <Suspense fallback={null}>
