@@ -241,13 +241,15 @@ export default function ParametrePage() {
         20 podtypov zobrazenia hlavy.
       </p>
 
-      <div className="flex flex-col items-center my-4">
-        <LightboxImage
-          src="https://res.cloudinary.com/filatelia-machins/image/upload/v1632078434/img/hlava-typ_uw6npu.jpg"
-          alt="Ukážka rozdielnych detailov, typ hlavy B4"
-          caption="Ukážka rozdielnych detailov, typ hlavy B4"
-          className="!max-w-[512px] h-auto rounded"
-        />
+      <div className="my-4">
+        <div className="max-w-[512px] w-full mx-auto">
+          <LightboxImage
+            src="https://res.cloudinary.com/filatelia-machins/image/upload/v1632078434/img/hlava-typ_uw6npu.jpg"
+            alt="Ukážka rozdielnych detailov, typ hlavy B4"
+            caption="Ukážka rozdielnych detailov, typ hlavy B4"
+            className="h-auto rounded"
+          />
+        </div>
         <p className="img-caption">
           Image credit: Douglas Myall, The Complete Deegam Machin Handbook. Rozdielne detaily, typ hlavy B4
         </p>
@@ -265,13 +267,15 @@ export default function ParametrePage() {
         číslom:
       </p>
 
-      <div className="flex flex-col items-center my-4">
-        <LightboxImage
-          src="https://res.cloudinary.com/filatelia-machins/image/upload/v1632066232/img/sirka-nh_lp3tbg.jpg"
-          alt="Šírka nominálnej hodnoty"
-          caption="Šírka nominálnej hodnoty"
-          className="!max-w-[700px] h-auto rounded"
-        />
+      <div className="my-4">
+        <div className="max-w-[700px] w-full mx-auto">
+          <LightboxImage
+            src="https://res.cloudinary.com/filatelia-machins/image/upload/v1632066232/img/sirka-nh_lp3tbg.jpg"
+            alt="Šírka nominálnej hodnoty"
+            caption="Šírka nominálnej hodnoty"
+            className="h-auto rounded"
+          />
+        </div>
         <p className="img-caption">Image credit: Robin Harris, Adminware. porovnanie šírky nominálnej hodnoty.</p>
       </div>
 
@@ -281,13 +285,15 @@ export default function ParametrePage() {
         buste. Môže byť posunutá horizontálne aj vertikálne od "ideálnej stredovej" pozície.
       </p>
 
-      <div className="flex flex-col items-center my-4">
-        <LightboxImage
-          src="https://res.cloudinary.com/filatelia-machins/image/upload/v1632081018/img/umiestnenie-nh_iquszm.jpg"
-          alt="Vertikálne posuny nominálnej hodnoty"
-          caption="Vertikálne posuny nominálnej hodnoty"
-          className="!max-w-[700px] h-auto rounded"
-        />
+      <div className="my-4">
+        <div className="max-w-[700px] w-full mx-auto">
+          <LightboxImage
+            src="https://res.cloudinary.com/filatelia-machins/image/upload/v1632081018/img/umiestnenie-nh_iquszm.jpg"
+            alt="Vertikálne posuny nominálnej hodnoty"
+            caption="Vertikálne posuny nominálnej hodnoty"
+            className="h-auto rounded"
+          />
+        </div>
         <p className="img-caption">Image credit: Robin Harris, Adminware. Vertikálne posuny nominálnej hodnoty.</p>
       </div>
 
