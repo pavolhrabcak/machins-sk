@@ -110,14 +110,14 @@ export default function RarityPage() {
         { src: "https://res.cloudinary.com/filatelia-machins/image/upload/v1632913822/img/Cambridge5_rbaduy.jpg", alt: "Cambridge Trials 6", caption: "Cambridge Colour Trials" },
         { src: "https://res.cloudinary.com/filatelia-machins/image/upload/v1632913822/img/Cambridge3_kpfj3v.jpg", alt: "Cambridge Trials 7", caption: "Cambridge Colour Trials" },
       ]}>
-        <div className="max-w-[80%] mx-auto">
+        <div className="md:max-w-[80%] mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 my-4">
             <GalleryTrigger index={0} className="w-full h-auto rounded" />
             <GalleryTrigger index={1} className="w-full h-auto rounded" />
             <GalleryTrigger index={2} className="w-full h-auto rounded" />
             <GalleryTrigger index={3} className="w-full h-auto rounded" />
           </div>
-          <div className="grid grid-cols-3 gap-3 my-4 w-3/4 mx-auto">
+          <div className="grid grid-cols-3 gap-3 my-4 md:w-3/4 mx-auto">
             <GalleryTrigger index={4} className="w-full h-auto rounded" />
             <GalleryTrigger index={5} className="w-full h-auto rounded" />
             <GalleryTrigger index={6} className="w-full h-auto rounded" />
