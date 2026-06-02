@@ -14,6 +14,7 @@ interface Props {
 
 export default function LightboxImage({ src, alt, caption, className, imgStyle }: Props) {
   const [open, setOpen] = useState(false);
+  const [loaded, setLoaded] = useState(false);
 
   return (
     <>
@@ -22,7 +23,8 @@ export default function LightboxImage({ src, alt, caption, className, imgStyle }
         alt={alt}
         title={caption || alt}
         onClick={() => setOpen(true)}
-        className={`lb-img${className ? ` ${className}` : ""}`}
+        onLoad={() => setLoaded(true)}
+        className={`lb-img transition-opacity duration-300${loaded ? "" : " opacity-0"}${className ? ` ${className}` : ""}`}
         style={imgStyle}
       />
       <Lightbox

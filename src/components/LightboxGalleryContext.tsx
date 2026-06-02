@@ -34,15 +34,22 @@ export function GalleryProvider({ slides, children }: { slides: Slide[]; childre
 
 export function GalleryTrigger({ index, className }: { index: number; className?: string }) {
   const { slides, openAt } = useContext(GalleryCtx);
+  const [loaded, setLoaded] = useState(false);
   const slide = slides[index];
   if (!slide) return null;
   return (
-    <img
-      src={slide.src}
-      alt={slide.alt}
-      title={slide.caption || slide.alt}
-      onClick={() => openAt(index)}
-      className={`lb-img${className ? ` ${className}` : ""}`}
-    />
+    <div className={`relative overflow-hidden${className ? ` ${className}` : ""}`}>
+      {!loaded && (
+        <div className="absolute inset-0 bg-gray-200 animate-pulse" />
+      )}
+      <img
+        src={slide.src}
+        alt={slide.alt}
+        title={slide.caption || slide.alt}
+        onClick={() => openAt(index)}
+        onLoad={() => setLoaded(true)}
+        className={`lb-img w-full h-full object-contain transition-opacity duration-300${loaded ? "" : " opacity-0"}`}
+      />
+    </div>
   );
 }
