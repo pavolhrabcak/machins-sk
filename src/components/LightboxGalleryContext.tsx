@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect, useRef } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
@@ -35,7 +35,13 @@ export function GalleryProvider({ slides, children }: { slides: Slide[]; childre
 export function GalleryTrigger({ index, className }: { index: number; className?: string }) {
   const { slides, openAt } = useContext(GalleryCtx);
   const [loaded, setLoaded] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
   const slide = slides[index];
+
+  useEffect(() => {
+    if (imgRef.current?.complete) setLoaded(true);
+  }, []);
+
   if (!slide) return null;
   return (
     <div className={`relative overflow-hidden${className ? ` ${className}` : ""}`}>
@@ -43,6 +49,7 @@ export function GalleryTrigger({ index, className }: { index: number; className?
         <div className="absolute inset-0 bg-gray-200 animate-pulse" />
       )}
       <img
+        ref={imgRef}
         src={slide.src}
         alt={slide.alt}
         title={slide.caption || slide.alt}
