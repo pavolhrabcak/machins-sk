@@ -18,8 +18,8 @@ const lora = Lora({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Filatelia Machins SK",
-    default: "Slovenský sprievodca svetom Machins | Filatelia Machins SK",
+    template: "%s | Filatelia Machins",
+    default: "Slovenský sprievodca svetom Machins | Filatelia Machins",
   },
   description:
     "Slovenský sprievodca svetom britských definitívnych známok Machins. Parametre, typy, raritné kusy, regionálne vydania a ďalšie informácie.",
@@ -28,12 +28,12 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "sk_SK",
-    siteName: "Filatelia Machins SK",
+    siteName: "Filatelia Machins",
     images: [
       {
         url: "https://res.cloudinary.com/filatelia-machins/image/upload/v1631482208/img/predecimal_zkklzs.jpg",
         width: 800,
-        alt: "Filatelia Machins SK",
+        alt: "Filatelia Machins",
       },
     ],
   },

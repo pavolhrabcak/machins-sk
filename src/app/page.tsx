@@ -4,7 +4,7 @@ import LightboxImage from "@/components/LightboxImage";
 import ModalLink from "@/components/ModalLink";
 
 export const metadata: Metadata = {
-  title: "Slovenský sprievodca svetom Machins | Filatelia Machins SK",
+  title: "Slovenský sprievodca svetom Machins | Filatelia Machins",
   description:
     "Slovenský sprievodca svetom britských definitívnych známok Machins. História, parametre, typy, raritné kusy a ďalšie informácie.",
   alternates: { canonical: "https://www.filatelia-machins.sk/" },

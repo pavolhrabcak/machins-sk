@@ -24,7 +24,7 @@ export default function Footer() {
       <div className="max-w-[1200px] mx-auto px-6 py-8 flex flex-col sm:flex-row justify-between gap-8">
 
         <div className="space-y-1 text-sm">
-          <p className="text-white font-semibold mb-2">Filatelia Machins SK</p>
+          <p className="text-white font-semibold mb-2">Filatelia Machins</p>
           <p className="text-blue-200/70">Slovenský sprievodca svetom Machins</p>
           <p className="text-blue-200/70 pt-3">© 2015–{year} Pali Hrabčák</p>
         </div>

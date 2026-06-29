@@ -30,7 +30,7 @@ export default function Sidebar() {
     <>
       {/* Mobile nav toggle */}
       <div className="md:hidden flex items-center justify-between px-4 py-3 bg-gray-100 border-b border-gray-200 text-[#003366]">
-        <span className="font-semibold text-sm">Filatelia Machins SK</span>
+        <span className="font-semibold text-sm">Filatelia Machins</span>
         <button
           aria-label="Menu"
           onClick={() => setMobileOpen((v) => !v)}

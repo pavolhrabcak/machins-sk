@@ -10,7 +10,7 @@ export default function Banner() {
       <div className="max-w-[1200px] mx-auto px-6 h-14 flex items-center justify-between gap-4">
         <Link href="/" className="flex flex-col justify-center group shrink-0">
           <span className="text-white font-bold text-base tracking-wide leading-tight group-hover:text-blue-200 transition-colors">
-            Filatelia Machins SK
+            Filatelia Machins
           </span>
           <span className="hidden sm:block text-blue-200/70 text-xs leading-tight group-hover:text-blue-200/90 transition-colors">
             Slovenský sprievodca svetom Machins
